@@ -23,3 +23,9 @@ jar {
     }
 }
 
+jacocoTestReport {
+    reports {
+	xml.enable true
+	html.enable true
+    }
+}
