@@ -33,7 +33,7 @@ public class VarastoTest {
     }
     
     @Test
-    public void konstruktoriSelviaaVaarastaSyötteesta() {
+    public void konstruktoriSelviaaVaarastaSyotteesta() {
         Varasto vaaraVarasto = new Varasto(0);
         Varasto vaaraVarastoEiTyhja = new Varasto(0, 2);
         Varasto vaaraVarastoEiTyhjaNegSaldo = new Varasto(0, -1);
