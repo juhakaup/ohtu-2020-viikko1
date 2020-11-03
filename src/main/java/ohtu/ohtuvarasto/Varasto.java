@@ -17,7 +17,11 @@ public class Varasto {
     }
 
     public Varasto(double tilavuus, double alkuSaldo) { // kuormitetaan
-        this(tilavuus);
+        if (tilavuus > 0.0) {
+            this.tilavuus = tilavuus;
+        } else { // virheellinen, nollataan
+            this.tilavuus = 0.0;  // => käyttökelvoton varasto
+        }
         if (alkuSaldo < 0.0) {
             this.saldo = 0.0;
         } else if (alkuSaldo <= tilavuus) { // mahtuu
@@ -28,7 +32,8 @@ public class Varasto {
     }
 
     // --- ottavat aksessorit eli getterit: ---
-    public double getSaldo() {
+    public double getSaldo() 
+    {
         return saldo;
     }
 
